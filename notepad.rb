@@ -6,11 +6,11 @@ if (Gem.win_platform?)
     io.set_encoding(Encoding.default_external, Encoding.default_internal)
   end
 end
-
-require_relative 'post.rb'
-require_relative 'task.rb'
-require_relative 'memo.rb'
-require_relative 'link.rb'
+current_path = File.dirname(__FILE__) + "/lib/"
+require_relative current_path + 'post.rb'
+require_relative current_path + 'task.rb'
+require_relative current_path + 'memo.rb'
+require_relative current_path + 'link.rb'
 
 puts "Привет, я твой блокнот!"
 
